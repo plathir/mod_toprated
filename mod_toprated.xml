@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<extension
+    type="module"
+    version="3.3"
+    client="site"
+    method="upgrade">
+    <name>Top Rated</name>
+    <creationDate>26 February 2013</creationDate>
+    <author>www.developerpages.gr</author>
+    <copyright>Copyright (C) 2013 www.developerpages.gr</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <version>1.1</version>
+    <description>Top Rated Articles with joomla 2.5 & 3 core article Voting System</description>
+    <files>
+        <filename module="mod_toprated">mod_toprated.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>mod_toprated.xml</filename>
+        <folder>tmpl</folder>
+    </files>
+    <languages>
+        <language tag="en-GB">en-GB.mod_toprated.ini</language>
+        <language tag="en-GB">en-GB.mod_toprated.sys.ini</language>
+    </languages>    
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="catid"
+                    type="category"
+                    extension="com_content"
+                    multiple="true"
+                    size="10"
+                    default=""
+                    label="JCATEGORY"
+                    description="MOD_TOPRATED_FIELD_CATEGORY_DESC" >
+                    <option value="">JOPTION_ALL_CATEGORIES</option>
+                </field>                
+                <field
+                    name="items"
+                    type="text"
+                    default="5"
+                    label="MOD_TOPRATED_ITEMS"
+                    description="MOD_TOPRATED_FIELD_ITEMS_DESC">
+                </field>
+                <field
+                    name="introtext"
+                    type="radio"
+                    default="0"
+                    label="MOD_TOPRATED_INTROTEXT"
+                    description="MOD_TOPRATED_FIELD_INTROTEXT_DESC">
+                    <option
+                        value="0">JNo
+                    </option>
+                    <option
+                        value="1">JYes
+                    </option>
+                </field>
+                <field
+                    name="star"
+                    type="text"
+                    default=""
+                    label="MOD_TOPRATED_STAR"
+                    description="MOD_TOPRATED_FIELD_STAR_DESC">
+                    
+                </field>
+
+                <field
+                    name="star_blank"
+                    type="text"
+                    default=""
+                    label="MOD_TOPRATED_STAR_BLANK"
+                    description="MOD_TOPRATED_FIELD_STAR_BLANK_DESC">
+                   
+                </field>
+                
+            </fieldset>     
+            
+            <fieldset
+                name="advanced">
+                <field
+                    name="layout"
+                    type="modulelayout"
+                    label="JFIELD_ALT_LAYOUT_LABEL"
+                    description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+                <field
+                    name="moduleclass_sfx"
+                    type="text"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+                <field
+                    name="owncache"
+                    type="list"
+                    default="1"
+                    label="COM_MODULES_FIELD_CACHING_LABEL"
+                    description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option
+                        value="1">JGLOBAL_USE_GLOBAL
+                    </option>
+                    <option
+                        value="0">COM_MODULES_FIELD_VALUE_NOCACHING
+                    </option>
+                </field>
+            </fieldset>            
+        </fields>
+    </config>
+</extension>
